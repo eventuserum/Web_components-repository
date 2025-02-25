@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Stacked Horizontal Cards</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&family=Raleway:wght@400;500;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Raleway', serif;
+        }
+
+        h2 {
+            font-family: 'Open Sans Condensed', sans-serif;
+        }
+
+        /* The container stacks cards vertically */
+        #container {
+            min-height: 100vh;
+            width: 100vw;
+            background-color: #056696;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            width: 90%;
+            max-width: 600px;
+            aspect-ratio: 2 / 1;
+            background-color: #fff;
+            border: 5px solid black;
+            box-shadow: 0 0 0 7px #fff, 0 0 8px 5px #000;
+            overflow: hidden;
+        }
+
+        /* On mobile, let the card show content that overflows (for the little box) */
+        @media (max-width: 600px) {
+            .card {
+                overflow: visible;
+            }
+        }
+
+        .card-image {
+            position: relative;
+            width: 33.33%;
+            height: 100%;
+            background-color: #FFDD33;
+            border-right: 5px solid #000;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-text {
+            position: relative;
+            /* for absolute positioning of the little box */
+            width: 66.67%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .card-text-special {
+            position: relative;
+            /* for absolute positioning of the little box */
+            width: 66.67%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card-text h2 {
+            font-size: 2rem;
+            color: #59C887;
+            letter-spacing: -2px;
+            text-align: center;
+        }
+
+        .card-image h2 {
+            font-size: 2.5rem;
+            color: #000000;
+            letter-spacing: -2px;
+            text-align: center;
+            padding-top: 25%;
+        }
+
+        .card-text p {
+            font-size: 1.5rem;
+            text-align: center;
+            line-height: 1.5;
+            font-weight: 500;
+            /*padding-top: 25%;*/
+        }
+
+        .card-image p {
+            font-size: 1.75rem;
+            text-align: center;
+            line-height: 1.5;
+            font-weight: 500;
+            padding-top: 25%;
+        }
+
+        /* Bottom info row */
+        .info {
+            display: flex;
+            justify-content: space-between;
+            /* ensure relative positioning so that the little box can be placed relative to .card-text instead */
+        }
+
+        .info .price {
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .info .price span:first-child {
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        .info .price span:last-child {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        /* The little box (date) is now positioned absolutely so it always appears flush at the bottom-right */
+        .date {
+            position: absolute;
+            bottom: -5px;
+            right: -5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid black;
+            border-right: none;
+            border-bottom: none;
+            padding: 10px 20px;
+            background: #fff;
+            font-size: 1.3rem;
+        }
+
+        .date span:first-child {
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        .date span:last-child {
+            font-weight: 500;
+        }
+
+        /* Optional: Adjust text sizes on very small screens */
+        @media (max-width: 400px) {
+            .card-text h2 {
+                font-size: 2rem;
+            }
+
+            .card-text p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <!-- Card 1 -->
+        <div class="card" id="hulk2">
+            <div class="card-image">
+                <h2>Opening</h2>
+                <p>8:00 AM -<br>8:45 AM</p>
+                <!--<img src="https://res.cloudinary.com/dsgvp2wmj/image/upload/v1636769866/466-4665707_hulk-png-avengers-earths-mightiest-heroes-hulk-transparent-removebg-preview_hxdclj.png" alt="Hulk" />-->
+            </div>
+            <div class="card-text-special card-text">
+                <h2>Morning Mingle & Cafecito</h2>
+                <div class="info">
+                    <div class="date">
+                        <span>RLP</span>
+                        <span>1.302 B</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 2 (duplicate for stacking demonstration) -->
+        <div class="card" id="hulk2">
+            <div class="card-image">
+                <h2>Opening</h2>
+                <p>8:00 AM -<br>8:45 AM</p>
+                <!--<img src="https://res.cloudinary.com/dsgvp2wmj/image/upload/v1636769866/466-4665707_hulk-png-avengers-earths-mightiest-heroes-hulk-transparent-removebg-preview_hxdclj.png" alt="Hulk" />-->
+            </div>
+            <div class="card-text">
+                <h2>Welcoming Address</h2>
+                <p>COMICS<br>GROUP</p>
+                <div class="info">
+                    <div class="date">
+                        <span>RLP</span>
+                        <span>1.302 B</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 (duplicate for stacking demonstration) -->
+        <div class="card" id="hulk2">
+            <div class="card-image">
+                <h2>Panel 1</h2>
+                <p>9:00 AM -<br>9:45 AM</p>
+                <!--<img src="https://res.cloudinary.com/dsgvp2wmj/image/upload/v1636769866/466-4665707_hulk-png-avengers-earths-mightiest-heroes-hulk-transparent-removebg-preview_hxdclj.png" alt="Hulk" />-->
+            </div>
+            <div class="card-text">
+                <h2>BIPOC PoP Education: <br>Teaching, Creating, & Resisting </h2>
+                <p>COMICS<br>GROUP</p>
+                <div class="info">
+                    <div class="date">
+                        <span>RLP</span>
+                        <span>1.302 B</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
