@@ -28,7 +28,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 20px;
+            gap: 3rem;
             padding: 20px;
         }
 
@@ -52,13 +52,52 @@
             }
         }
 
+        /*
+        Card Types:
+        * 1. Panel     #2eb455
+        * 2. Workshop	#5caab4
+        * 3. Screening	#ffdd33
+        * 4. Tour      #cc3234
+        * 5. Lunch     #4e4a83
+        * 6. Awards	#ee6937
+        * Special	Simple Layout
+        */
+
+        .workshop {
+            background-color: #2eb455;
+        }
+
+        .panel {
+            background-color: #5caab4;
+        }
+
+        .awards {
+            background-color: #ffdd33;
+        }
+
+        .tour {
+            background-color: #cc3234;
+        }
+
+        .lunch {
+            background-color: pink;
+        }
+
+        .screening {
+            background-color: #a49cc0;
+        }
+
+        /*.card-awards {
+            align-items: ;
+        }*/
+
         .card-image {
             position: relative;
             width: 33.33%;
             height: 100%;
-            background-color: #FFDD33;
             border-right: 5px solid #000;
         }
+
 
         .card-image img {
             width: 100%;
@@ -90,7 +129,6 @@
 
         .card-text h2 {
             font-size: 2rem;
-            color: #59C887;
             letter-spacing: -2px;
             text-align: center;
         }
@@ -104,21 +142,22 @@
         }
 
         .card-text p {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             text-align: center;
             line-height: 1.5;
             font-weight: 500;
-            /*padding-top: 25%;*/
         }
 
         .card-image p {
             font-size: 1.75rem;
-            text-align: center;
+            text-align: left;
             line-height: 1.5;
             font-weight: 500;
-            padding-top: 25%;
         }
 
+        .card-text-lunch {
+            font-size: 3.5rem!important;
+        }
         /* Bottom info row */
         .info {
             display: flex;
@@ -168,15 +207,13 @@
             font-weight: 500;
         }
 
-        /* Optional: Adjust text sizes on very small screens */
-        @media (max-width: 400px) {
-            .card-text h2 {
-                font-size: 2rem;
-            }
-
-            .card-text p {
-                font-size: 1.2rem;
-            }
+        .location {
+            position: absolute;
+            bottom: 0;
+            padding: 0 5%;
+            width: 100%;
+            background-color: white;
+            border-top: 5px solid black;
         }
     </style>
 </head>
@@ -185,58 +222,98 @@
     <div id="container">
         <!-- Card 1 -->
         <div class="card" id="hulk2">
-            <div class="card-image">
+            <div class="card-image workshop">
                 <h2>Opening</h2>
                 <p>8:00 AM -<br>8:45 AM</p>
-                <!--<img src="https://res.cloudinary.com/dsgvp2wmj/image/upload/v1636769866/466-4665707_hulk-png-avengers-earths-mightiest-heroes-hulk-transparent-removebg-preview_hxdclj.png" alt="Hulk" />-->
+                <p class="location">RLP 1.302 B</p>
+
             </div>
             <div class="card-text-special card-text">
                 <h2>Morning Mingle & Cafecito</h2>
-                <div class="info">
-                    <div class="date">
-                        <span>RLP</span>
-                        <span>1.302 B</span>
-                    </div>
-                </div>
+
             </div>
         </div>
         <!-- Card 2 (duplicate for stacking demonstration) -->
         <div class="card" id="hulk2">
-            <div class="card-image">
+            <div class="card-image panel">
                 <h2>Opening</h2>
                 <p>8:00 AM -<br>8:45 AM</p>
-                <!--<img src="https://res.cloudinary.com/dsgvp2wmj/image/upload/v1636769866/466-4665707_hulk-png-avengers-earths-mightiest-heroes-hulk-transparent-removebg-preview_hxdclj.png" alt="Hulk" />-->
+                <p class="location">RLP 1.302 B</p>
             </div>
             <div class="card-text">
-                <h2>Welcoming Address</h2>
-                <p>COMICS<br>GROUP</p>
-                <div class="info">
-                    <div class="date">
-                        <span>RLP</span>
-                        <span>1.302 B</span>
-                    </div>
-                </div>
+                <h2>BIPOC PoP Education: Teaching, Creating, & Resisting</h2>
+                <p>Moderator: Dani Orozco</p>
+                <p>Panelist(s):</p>
+                <p>Leticia Urieta, Liz Rocha-Seelig</p>
+                <p>Ernesto Cuevas</p>
             </div>
         </div>
         <!-- Card 3 (duplicate for stacking demonstration) -->
         <div class="card" id="hulk2">
-            <div class="card-image">
-                <h2>Panel 1</h2>
-                <p>9:00 AM -<br>9:45 AM</p>
-                <!--<img src="https://res.cloudinary.com/dsgvp2wmj/image/upload/v1636769866/466-4665707_hulk-png-avengers-earths-mightiest-heroes-hulk-transparent-removebg-preview_hxdclj.png" alt="Hulk" />-->
+            <div class="card-image awards">
+                <h2>Awards</h2>
+                <p>12:00 PM -<br>1:00 PM</p>
+                <p class="location">RLP 1.302 B</p>
+            </div>
+            <div class="card-text card-awards">
+                <h2>Screenings of Award-winning Animation Shorts</h2>
+                <p>Profe Latinx, Dr. Intergalactic, <br>
+                <p>Angela Sanchez, Marc Sanchez, <br>
+                <p>Felipe Esquivel</p>
+            </div>
+        </div>
+        <!-- Card 4 (duplicate for stacking demonstration) -->
+        <div class="card" id="hulk2">
+            <div class="card-image tour">
+                <h2>Tour</h2>
+                <p>11:00 AM -<br>1:00 PM</p>
+                <p class="location">RLP 1.302 B</p>
+
             </div>
             <div class="card-text">
-                <h2>BIPOC PoP Education: <br>Teaching, Creating, & Resisting </h2>
-                <p>COMICS<br>GROUP</p>
-                <div class="info">
-                    <div class="date">
-                        <span>RLP</span>
-                        <span>1.302 B</span>
-                    </div>
-                </div>
+                <h2>Benson Archive Tour </h2>
+                <p>Benson Latin American Collection</p>
+
+            </div>
+        </div>
+        <!-- Card 5 (duplicate for stacking demonstration) -->
+        <div class="card" id="hulk2">
+            <div class="card-image lunch">
+                <h2>Lunch</h2>
+                <p>12:00 PM -<br>1:00 PM</p>
+                <p class="location">RLP 1.302 B</p>
+
+            </div>
+            <div class="card-text">
+                <!--<h2>Lunch</h2>
+                Thursday: Sandwiches
+                Friday: Tamales
+                Saturday: Tacos
+                -->
+                <!--<img src="https://as1.ftcdn.net/jpg/05/42/40/10/1000_F_542401021_AXaIQAt6CpfvKdKiRRHbMCJFXl0M6h3g.jpg" alt="Lunch time taco" sizes="cover">-->
+                <h2 class="card-text-lunch">Lunch</h2>
+            </div>
+        </div>
+        <!-- Card 6 (duplicate for stacking demonstration) -->
+        <div class="card" id="hulk2">
+            <div class="card-image screening">
+                <h2>Screening</h2>
+                <p>10:00 AM -<br>12:00 PM</p>
+                <p class="location">RLP 1.302 B</p>
+
+            </div>
+            <div class="card-text">
+                <h2>Hilando Sones:<br>The Weaver's Songs</h2>
+                <p>Larry Rattner</p>
+                <p>Ismael Vásquez Bernabé</p>
             </div>
         </div>
     </div>
+    </div>
+    <!--
+    # Special Thanks to Aryan Tayal on Codepen:
+    # https://codepen.io/aryancodeworm/pen/vYJzMgB
+    -->
 </body>
 
 </html>
