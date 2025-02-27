@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Cards with Expiration</title>
+  <style>
+    /* ===== Basic Card Styling ===== */
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin: 1rem;
+      overflow: hidden;
+      max-width: 300px;
+      display: inline-block; /* For demo: place cards side-by-side */
+      vertical-align: top;
+      font-family: sans-serif;
+      transition: opacity 0.5s ease;
+    }
+    
+    /* When expired, we simply hide it or visually mark it */
+    .card.no-show {
+      opacity: 0.3;
+    }
+
+    /* Card Image Section */
+    .card-image {
+      padding: 1rem;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+    .card-image h2 {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+    }
+    .card-image p {
+      margin: 0.25rem 0;
+    }
+    .location {
+      font-weight: bold;
+      color: #666;
+    }
+
+    /* Card Text Section */
+    .card-text {
+      padding: 1rem;
+      background-color: #fff;
+    }
+    .card-text h2 {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    /* Special card text (if 'Special' == TRUE) */
+    .card-text-special {
+      border-top: 3px solid red;
+    }
+
+    /* Hide elements if needed */
+    .no-show-element {
+      display: none;
+    }
+
+    /* ===== Classes for Different Types ===== */
+    .break {
+      background: #ffebcd; /* Example color for Break */
+    }
+    .panel {
+      background: #cce5ff; /* Example color for Panel */
+    }
+    .workshop {
+      background: #e2f0cb; /* Example color for Workshop */
+    }
+    .screening {
+      background: #ffe6e6; /* Example color for Screening */
+    }
+    .tour {
+      background: #f9e6ff; /* Example color for Tour */
+    }
+    .awards {
+      background: #fff2cc; /* Example color for Awards */
+    }
+
+    /* ===== Containers for Each Day ===== */
+    .day-container {
+      padding: 1rem;
+      margin: 1rem 0;
+      min-height: 100px;
+    }
+    /* Distinct background colors for each day container */
+    #card-container-1 {
+      background-color: #d7f7ff; /* Light blue for Thursday */
+    }
+    #card-container-2 {
+      background-color: #ffe9b8; /* Light orange for Friday */
+    }
+    #card-container-3 {
+      background-color: #ffd2dd; /* Light pink for Saturday */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Day containers -->
+  <div id="card-container-1" class="day-container">
+    <h2>Thursday, 03/06/2025</h2>
+  </div>
+
+  <div id="card-container-2" class="day-container">
+    <h2>Friday, 03/07/2025</h2>
+  </div>
+
+  <div id="card-container-3" class="day-container">
+    <h2>Saturday, 03/08/2025</h2>
+  </div>
+
+  <script>
+    /**
+     * Fetch the JSON file and return the array of event objects.
+     */
+    async function loadEvents() {
+      const response = await fetch('events.json');
+      const events = await response.json();
+      return events;
+    }
+
+    /**
+     * Build and display cards for each event object.
+     * Cards go into one of three containers based on 'Day'.
+     * Also, if the current time is past the event's end time, 
+     * add the 'no-show' class to the card.
+     */
+    function displayCards(events) {
+      events.forEach(event => {
+        // Create the main card container
+        const card = document.createElement('div');
+        card.classList.add('card');
+
+        // ===== Card Image Section =====
+        const cardImage = document.createElement('div');
+        // Convert event.Type to a lowercase class for styling
+        const typeClass = event.Type.toLowerCase();
+        cardImage.classList.add('card-image', typeClass);
+
+        // Event Type
+        const typeHeading = document.createElement('h2');
+        typeHeading.textContent = event.Type;
+        cardImage.appendChild(typeHeading);
+
+        // Time Range
+        const timeP = document.createElement('p');
+        timeP.innerHTML = `${event['Start Time']} -<br>${event['End Time']}`;
+        cardImage.appendChild(timeP);
+
+        // Location
+        const locationP = document.createElement('p');
+        locationP.classList.add('location');
+        locationP.textContent = event.Location;
+        cardImage.appendChild(locationP);
+
+        card.appendChild(cardImage);
+
+        // ===== Card Text Section =====
+        const cardText = document.createElement('div');
+        cardText.classList.add('card-text');
+        // If 'Special' == 'TRUE', add a special class
+        if (event.Special.toUpperCase() === 'TRUE') {
+          cardText.classList.add('card-text-special');
+        }
+
+        // Title
+        const titleH2 = document.createElement('h2');
+        titleH2.textContent = event.Title;
+        cardText.appendChild(titleH2);
+
+        // Moderator (hide if type is Break or Awards)
+        const moderatorP = document.createElement('p');
+        if (event.Type === 'Break' || event.Type === 'Awards') {
+          moderatorP.classList.add('no-show-element');
+        }
+        moderatorP.innerHTML = `<b>Moderator:</b> ${event.Moderator}`;
+        cardText.appendChild(moderatorP);
+
+        // Panelists
+        const panelists = [];
+        for (let i = 1; i <= 6; i++) {
+          const key = `Panelist ${i}`;
+          if (event[key]) {
+            panelists.push(event[key]);
+          }
+        }
+        const panelistP = document.createElement('p');
+        panelistP.innerHTML = `<b>Panelist(s):</b> ${panelists.join(', ')}`;
+        cardText.appendChild(panelistP);
+
+        card.appendChild(cardText);
+
+        // ===== Expiration Check =====
+        // Create a Date object from the event's day (date portion) and end time in CST.
+        // Assume event.Day is in the format "Thursday, 03/06/2025"
+        // and event["End Time"] is like "8:30 AM"
+        const datePart = event.Day.split(', ')[1]; // e.g., "03/06/2025"
+        const endTimeStr = event["End Time"];         // e.g., "8:30 AM"
+        const eventEnd = new Date(`${datePart} ${endTimeStr} CST`);
+        const now = new Date();
+        // If the current time is after the event's end time, mark the card as expired.
+        if (now > eventEnd) {
+          card.classList.add('no-show');
+        }
+
+        // ===== Append Card to the Appropriate Container =====
+        let containerId = '';
+        switch (event.Day) {
+          case 'Thursday, 03/06/2025':
+            containerId = 'card-container-1';
+            break;
+          case 'Friday, 03/07/2025':
+            containerId = 'card-container-2';
+            break;
+          case 'Saturday, 03/08/2025':
+            containerId = 'card-container-3';
+            break;
+          default:
+            // Optionally handle events with unexpected Day values
+            break;
+        }
+        if (containerId) {
+          const container = document.getElementById(containerId);
+          container.appendChild(card);
+        }
+      });
+    }
+
+    // Load events from JSON and display them with expiration check
+    loadEvents()
+      .then(events => {
+        displayCards(events);
+      })
+      .catch(err => {
+        console.error('Error loading JSON:', err);
+      });
+  </script>
+</body>
+</html>
