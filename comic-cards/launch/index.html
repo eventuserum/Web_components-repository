@@ -1,159 +1,168 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8" />
   <title>Event Cards</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- Container for our generated cards -->
   <div id="container">
+    <h2 id="event-date"></h2>
     <!-- Day containers -->
     <div id="card-container-1" class="day-container">
-        <h2>Thursday, 03/06/2025</h2>
-      </div>
-    
-      <div id="card-container-2" class="day-container">
-        <h2>Friday, 03/07/2025</h2>
-      </div>
-    
-      <div id="card-container-3" class="day-container">
-        <h2>Saturday, 03/08/2025</h2>
-      </div>
     </div>
 
+    <div id="card-container-2" class="day-container">
+    </div>
+
+    <div id="card-container-3" class="day-container">
+    </div>
+  </div>
+
   <script>
-    /**
-     * Fetch the JSON file and return the array of event objects.
-     */
-    async function loadEvents() {
-      const response = await fetch('events.json');
-      // Convert response to JavaScript array (or object)
-      const events = await response.json();
-      return events;
-    }
+    document.addEventListener("DOMContentLoaded", function () {
+      // Create a fixed date display element
+      const dateDisplay = document.createElement("div");
+      dateDisplay.id = "date-display";
+      /*dateDisplay.style.position = "fixed";
+      dateDisplay.style.top = "10px";
+      dateDisplay.style.left = "50%";
+      dateDisplay.style.transform = "translateX(-50%)";
+      dateDisplay.style.backgroundColor = "rgba(0, 0, 0, 1)";
+      dateDisplay.style.color = "white";
+      dateDisplay.style.padding = "10px 20px";
+      dateDisplay.style.borderRadius = "8px";
+      dateDisplay.style.fontSize = "18px";
+      dateDisplay.style.fontWeight = "bold";
+      dateDisplay.style.zIndex = "1000";
+      dateDisplay.style.display = "none"; // Hide initially*/
+      document.body.appendChild(dateDisplay);
 
-    /**
-     * Build and display cards for each event object.
-     */
-    function displayCards(events) {
-      const container = document.getElementById('container');
+      /**
+       * Fetch the JSON file and return the array of event objects.
+       */
+      async function loadEvents() {
+        const response = await fetch("events.json");
+        const events = await response.json();
+        return events;
+      }
 
-      events.forEach(event => {
-        // Create the main card container
-        const card = document.createElement('div');
-        card.classList.add('card');
+      /**
+       * Build and display cards for each event object.
+       */
+      function displayCards(events) {
+        const container = document.getElementById("container");
 
-        // ===== Card Image Section =====
-        const cardImage = document.createElement('div');
-        // Convert event.Type to a lowercase class for styling
-        // e.g. "Break" -> "break", "Panel" -> "panel", etc.
-        const typeClass = event.Type.toLowerCase();
-        cardImage.classList.add('card-image', typeClass);
+        events.forEach((event) => {
+          // Create the main card container
+          const card = document.createElement("div");
+          card.classList.add("card");
+          card.setAttribute("data-date", event.Day); // Store date for scrolling
 
-        // Event Type
-        const typeHeading = document.createElement('h2');
-        typeHeading.textContent = event.Type;
-        cardImage.appendChild(typeHeading);
+          // ===== Card Image Section =====
+          const cardImage = document.createElement("div");
+          const typeClass = event.Type.toLowerCase();
+          cardImage.classList.add("card-image", typeClass);
 
-        // Time Range
-        const timeP = document.createElement('p');
-        timeP.innerHTML = `${event['Start Time']} -<br>${event['End Time']}`;
-        cardImage.appendChild(timeP);
+          const typeHeading = document.createElement("h2");
+          typeHeading.textContent = event.Type;
+          cardImage.appendChild(typeHeading);
 
-        // Location
-        const locationP = document.createElement('p');
-        locationP.classList.add('location');
-        locationP.textContent = event.Location;
-        cardImage.appendChild(locationP);
+          const timeP = document.createElement("p");
+          timeP.innerHTML = `${event["Start Time"]} -<br>${event["End Time"]}`;
+          cardImage.appendChild(timeP);
 
-        card.appendChild(cardImage);
+          const locationP = document.createElement("p");
+          locationP.classList.add("location");
+          locationP.textContent = event.Location;
+          cardImage.appendChild(locationP);
 
-        // ===== Card Text Section =====
-        const cardText = document.createElement('div');
-        cardText.classList.add('card-text');
-        // If 'Special' == 'TRUE', add a special class
-        if (event.Special.toUpperCase() === 'TRUE') {
-          cardText.classList.add('card-text-special');
-        }
+          card.appendChild(cardImage);
 
-        // Title
-        const titleH2 = document.createElement('h2');
-        titleH2.textContent = event.Title;
-        cardText.appendChild(titleH2);
-
-        // Moderator
-        const moderatorP = document.createElement('p');
-        // If the Type is Break or Awards, hide the Moderator
-        if (event.Type === 'Break' || event.Type === 'Awards') {
-          moderatorP.classList.add('no-show');
-        }
-        moderatorP.innerHTML = `<b>Moderator:</b> ${event.Moderator}`;
-        cardText.appendChild(moderatorP);
-
-        // Panelists
-        // We'll gather panelists 1..6 into an array if they exist
-        const panelists = [];
-        for (let i = 1; i <= 6; i++) {
-          const key = `Panelist ${i}`;
-          if (event[key]) {
-            panelists.push(event[key]);
+          // ===== Card Text Section =====
+          const cardText = document.createElement("div");
+          cardText.classList.add("card-text");
+          if (event.Special.toUpperCase() === "TRUE") {
+            cardText.classList.add("card-text-special");
           }
-        }
-        const panelistP = document.createElement('p');
-        panelistP.innerHTML = `<b>Panelist(s):</b> ${panelists.join(', ')}`;
-        cardText.appendChild(panelistP);
 
-        card.appendChild(cardText);
+          const titleH2 = document.createElement("h2");
+          titleH2.textContent = event.Title;
+          cardText.appendChild(titleH2);
 
-        // ===== Expiration Check =====
-        // Create a Date object from the event's day (date portion) and end time in CST.
-        // Assume event.Day is in the format "Thursday, 03/06/2025"
-        // and event["End Time"] is like "8:30 AM"
-        const datePart = event.Day.split(', ')[1]; // e.g., "03/06/2025"
-        const endTimeStr = event["End Time"];         // e.g., "8:30 AM"
-        const eventEnd = new Date(`${datePart} ${endTimeStr} CST`);
-        const now = new Date();
-        // If the current time is after the event's end time, mark the card as expired.
-        if (now > eventEnd) {
-          card.classList.add('no-show');
-        }
-        
-        container.appendChild(card);
-                // 2) Determine which container to put this card in
-                let containerId = '';
-        switch (event.Day) {
-          case 'Thursday, 03/06/2025':
-            containerId = 'card-container-1';
-            break;
-          case 'Friday, 03/07/2025':
-            containerId = 'card-container-2';
-            break;
-          case 'Saturday, 03/08/2025':
-            containerId = 'card-container-3';
-            break;
-          default:
-            // If it doesn't match any known day, do nothing or handle as needed
-            break;
-        }
+          const moderatorP = document.createElement("p");
+          if (event.Type === "Break" || event.Type === "Awards") {
+            moderatorP.classList.add("no-show");
+          }
+          moderatorP.innerHTML = `<b>Moderator:</b> ${event.Moderator}`;
+          cardText.appendChild(moderatorP);
 
-        // 3) Append the card to the correct container
-        if (containerId) {
-          const container = document.getElementById(containerId);
+          const panelists = [];
+          for (let i = 1; i <= 6; i++) {
+            const key = `Panelist ${i}`;
+            if (event[key]) {
+              panelists.push(event[key]);
+            }
+          }
+          const panelistP = document.createElement("p");
+          panelistP.innerHTML = `${panelists.join(", ")}`;
+          cardText.appendChild(panelistP);
+
+          card.appendChild(cardText);
+
+          // Append card to the main container
           container.appendChild(card);
-        }
-      });
-    }
+        });
 
-    // Load the events from JSON and display them
-    loadEvents()
-      .then(events => {
-        displayCards(events);
-      })
-      .catch(err => {
-        console.error('Error loading JSON:', err);
-      });
+        // Attach scroll event after cards are created
+        window.addEventListener("scroll", updateDate);
+        updateDate(); // Initial update
+      }
+
+      /**
+       * Update the date display based on the currently visible card.
+       */
+      function updateDate() {
+        let visibleCard = null;
+        let minDistance = window.innerHeight;
+        const offset = 100; // Adjust this value to change the trigger point
+
+        document.querySelectorAll(".card").forEach((card) => {
+          const rect = card.getBoundingClientRect();
+          if (rect.top >= -offset && rect.top < minDistance) {
+            visibleCard = card;
+            minDistance = rect.top;
+          }
+        });
+
+        if (visibleCard) {
+          const date = visibleCard.getAttribute("data-date");
+          if (date) {
+            dateDisplay.innerText = date;
+            /*dateDisplay.style.display = "block";
+            dateDisplay.style.opacity = "1";*/
+          }
+        } else {
+          dateDisplay.style.opacity = "0";
+        }
+      }
+
+
+      // Load events and display cards
+      loadEvents()
+        .then((events) => {
+          displayCards(events);
+        })
+        .catch((err) => {
+          console.error("Error loading JSON:", err);
+        });
+    });
+
   </script>
 </body>
+
 </html>

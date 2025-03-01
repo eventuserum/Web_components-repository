@@ -17,12 +17,12 @@ h2 {
 #container {
     min-height: 100vh;
     /*width: 100vw;*/
-    background-color: #fff/*#FAF9F6*/;
+    background-color: #FAF9F6;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: .5rem;
+    gap: 3rem;
     padding: 20px;
 }
 
@@ -37,24 +37,6 @@ h2 {
     font-size: 3rem;
     padding: 5%;
 }
-#date-display {
-    position: fixed;
-    top: 0;
-    /* left: 50%; */
-    /* transform: translateX(-50%); */
-    background-color: #fff;
-    /* color: white; */
-    /* padding: 10px 20px; */
-    /* border-radius: 8px; */
-    font-size: 18px;
-    font-weight: bold;
-    z-index: 1000;
-    display: block;
-    width: 100%;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25);
-}
 .card {
     position: relative;
     display: flex;
@@ -66,10 +48,8 @@ h2 {
     border: 5px solid black;
     box-shadow: 0 0 0 7px #fff, 0 0 8px 5px #000;
     overflow: hidden;
-    margin: 1rem;
+    margin: 2rem;
 }
-
-
 
 /* On mobile, let the card show content that overflows (for the little box) */
 @media (max-width: 600px) {
@@ -155,7 +135,7 @@ Card Types:
 }
 
 .card-text h2 {
-    font-size: 2rem;
+    font-size: 1.65rem;
     letter-spacing: -2px;
     text-align: center;
 }

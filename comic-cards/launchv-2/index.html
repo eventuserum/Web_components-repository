@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Cards</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    <script>
+(function(d){
+    function C(k){return(d.cookie.match('(^|; )'+k+'=([^;]*)')||0):inlineRefs{references="&#91;&#123;&quot;type&quot;&#58;&quot;inline_reference&quot;,&quot;start_index&quot;&#58;509,&quot;end_index&quot;&#58;512,&quot;number&quot;&#58;2,&quot;url&quot;&#58;&quot;https&#58;//stackoverflow.com/questions/45622686/how-do-i-make-my-responsive-website-honour-request-a-desktop-site-on-mobiles&quot;,&quot;favicon&quot;&#58;&quot;https&#58;//imgs.search.brave.com/4WRMec_wn8Q9LO6DI43kkBvIL6wD5TYCXztC9C9kEI0/rs&#58;fit&#58;32&#58;32&#58;1&#58;0/g&#58;ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWU3Zjg0ZjA1/YjQ3ZTlkNjQ1ODA1/MjAwODhiNjhjYWU0/OTc4MjM4ZDJlMTBi/ODExYmNiNTkzMjdh/YjM3MGExMS9zdGFj/a292ZXJmbG93LmNv/bS8&quot;,&quot;snippet&quot;&#58;&quot;This&#32;works&#32;for&#32;me&#32;in&#32;mobile&#32;Safari&#32;on&#32;both&#32;iPhone&#32;5&#32;and&#32;6&#32;running&#32;iOS&#32;10.3.3&#32;and&#32;(two&#32;years&#32;later)&#32;an&#32;iPhone&#32;XS&#32;running&#32;iOS&#32;13.3.\nAddendum&#32;31.12.2019\nIn&#32;response&#32;to&#32;a&#32;request&#32;for&#32;further&#32;details,&#32;all&#32;I&#32;did&#32;was&#32;add&#32;the&#32;following&#32;at&#32;the&#32;bottom&#32;of&#32;each&#32;web&#32;page,&#32;just&#32;before&#32;the&#32;&#32;tag&#58;\n\n&#32;\n(function(d)&#123;&#32;\nfunction&#32;C(k)&#123;return(d.cookie.match('(^|;&#32;)'+k+'=(&#91;^;&#93;*)')||0)&#91;2&#93;;&#125;&#32;\nvar&#32;ua&#32;=&#32;navigator.userAgent,&#32;\n…&quot;&#125;&#93;"};}
+    var ua = navigator.userAgent,
+        ismobile = / mobile/i.test(ua),
+        mgecko = !!( / gecko/i.test(ua) && / firefox\\//i.test(ua)),
+        wasmobile = C('wasmobile') === "was",
+        desktopvp = 'user-scalable=yes, maximum-scale=2',
+        el;
+    if(ismobile && !wasmobile){
+        d.cookie = "wasmobile=was";
+    } else if (!ismobile && wasmobile){
+        if (mgecko) {
+            el = d.createElement('meta');
+            el.setAttribute('content',desktopvp);
+            el.setAttribute('name','viewport');
+            d.getElementsByTagName('head').:inlineRefs{references="&#91;&#123;&quot;type&quot;&#58;&quot;inline_reference&quot;,&quot;start_index&quot;&#58;1086,&quot;end_index&quot;&#58;1089,&quot;number&quot;&#58;0,&quot;url&quot;&#58;&quot;https&#58;//forum.wixstudio.com/t/how-to-block-request-desktop-site-from-url-reload-on-mobile-device/37568&quot;,&quot;favicon&quot;&#58;&quot;https&#58;//imgs.search.brave.com/k1Q4PEELVRO2IdONYb_RKT_bqgE-hwtXCUoBvWcnMLA/rs&#58;fit&#58;32&#58;32&#58;1&#58;0/g&#58;ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzIzMzQ2ZDRj/ZjMwNjk5ZjIxZGU2/MWE0NjY2YzAzYzc3/YWE3ODEyYjBiMTYw/NWQ0MDJhZGZiZTZm/NzZlMzRlNy9mb3J1/bS53aXhzdHVkaW8u/Y29tLw&quot;,&quot;snippet&quot;&#58;&quot;Need&#32;help&#32;turning&#32;off&#32;mobile&#32;friendly&#32;to&#32;certain&#32;pages&#32;of&#32;my&#32;site.&#32;Ask&#32;the&#32;community&#32;code&#32;,&#32;question&#58;&#32;How&#32;can&#32;I&#32;find&#32;my&#32;mobile&#32;friendly&#32;URL&#32;to&#32;reroute&#32;tablets&#32;using&#32;wixlocation.to?&#32;Ask&#32;the&#32;community&#32;code&#32;,&#32;question&#32;•&#32;January&#32;23,&#32;2020&#58;&#32;August&#32;1,&#32;2020…&quot;&#125;&#93;"}appendChild( el );
+        } else {
+            d.getElementsByName('viewport').:inlineRefs{references="&#91;&#123;&quot;type&quot;&#58;&quot;inline_reference&quot;,&quot;start_index&quot;&#58;1169,&quot;end_index&quot;&#58;1172,&quot;number&quot;&#58;0,&quot;url&quot;&#58;&quot;https&#58;//forum.wixstudio.com/t/how-to-block-request-desktop-site-from-url-reload-on-mobile-device/37568&quot;,&quot;favicon&quot;&#58;&quot;https&#58;//imgs.search.brave.com/k1Q4PEELVRO2IdONYb_RKT_bqgE-hwtXCUoBvWcnMLA/rs&#58;fit&#58;32&#58;32&#58;1&#58;0/g&#58;ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzIzMzQ2ZDRj/ZjMwNjk5ZjIxZGU2/MWE0NjY2YzAzYzc3/YWE3ODEyYjBiMTYw/NWQ0MDJhZGZiZTZm/NzZlMzRlNy9mb3J1/bS53aXhzdHVkaW8u/Y29tLw&quot;,&quot;snippet&quot;&#58;&quot;Need&#32;help&#32;turning&#32;off&#32;mobile&#32;friendly&#32;to&#32;certain&#32;pages&#32;of&#32;my&#32;site.&#32;Ask&#32;the&#32;community&#32;code&#32;,&#32;question&#58;&#32;How&#32;can&#32;I&#32;find&#32;my&#32;mobile&#32;friendly&#32;URL&#32;to&#32;reroute&#32;tablets&#32;using&#32;wixlocation.to?&#32;Ask&#32;the&#32;community&#32;code&#32;,&#32;question&#32;•&#32;January&#32;23,&#32;2020&#58;&#32;August&#32;1,&#32;2020…&quot;&#125;&#93;"}setAttribute('content',desktopvp);
+        }
+    }
+}(document));
+</script>
+  </script>
+</head>
+<body>
+
+  <!-- Container for our generated cards -->
+  <div id="container">
+    <!-- Day containers -->
+    <div id="card-container-1" class="day-container">
+        <h2>Thursday, 03/06/2025</h2>
+      </div>
+    
+      <div id="card-container-2" class="day-container">
+        <h2>Friday, 03/07/2025</h2>
+      </div>
+    
+      <div id="card-container-3" class="day-container">
+        <h2>Saturday, 03/08/2025</h2>
+      </div>
+    </div>
+
+  <script>
+    /**
+     * Fetch the JSON file and return the array of event objects.
+     */
+    async function loadEvents() {
+      const response = await fetch('events.json');
+      // Convert response to JavaScript array (or object)
+      const events = await response.json();
+      return events;
+    }
+
+    /**
+     * Build and display cards for each event object.
+     */
+    function displayCards(events) {
+      const container = document.getElementById('container');
+
+      events.forEach(event => {
+        // Create the main card container
+        const card = document.createElement('div');
+        card.classList.add('card');
+
+        // ===== Card Image Section =====
+        const cardImage = document.createElement('div');
+        // Convert event.Type to a lowercase class for styling
+        // e.g. "Break" -> "break", "Panel" -> "panel", etc.
+        const typeClass = event.Type.toLowerCase();
+        cardImage.classList.add('card-image', typeClass);
+
+        // Event Type
+        const typeHeading = document.createElement('h2');
+        typeHeading.textContent = event.Type;
+        cardImage.appendChild(typeHeading);
+
+        // Time Range
+        const timeP = document.createElement('p');
+        timeP.innerHTML = `${event['Start Time']} -<br>${event['End Time']}`;
+        cardImage.appendChild(timeP);
+
+        // Location
+        const locationP = document.createElement('p');
+        locationP.classList.add('location');
+        locationP.textContent = event.Location;
+        cardImage.appendChild(locationP);
+
+        card.appendChild(cardImage);
+
+        // ===== Card Text Section =====
+        const cardText = document.createElement('div');
+        cardText.classList.add('card-text');
+        // If 'Special' == 'TRUE', add a special class
+        if (event.Special.toUpperCase() === 'TRUE') {
+          cardText.classList.add('card-text-special');
+        }
+
+        // Title
+        const titleH2 = document.createElement('h2');
+        titleH2.textContent = event.Title;
+        cardText.appendChild(titleH2);
+
+        // Moderator
+        const moderatorP = document.createElement('p');
+        // If the Type is Break or Awards, hide the Moderator
+        if (event.Type === 'Break' || event.Type === 'Awards') {
+          moderatorP.classList.add('no-show');
+        }
+        if (event.Type === "Workshop" || event.Type === "Screening") {
+          moderatorP.innerHTML = `<b>Facilitator:</b> ${event.Moderator}`;
+        } else if ( event.Type === "Panel" ) {
+          moderatorP.innerHTML = `<b>Moderator:</b> ${event.Moderator}`;
+        }
+        cardText.appendChild(moderatorP);
+
+        // Panelists
+        // We'll gather panelists 1..6 into an array if they exist
+        const panelists = [];
+        for (let i = 1; i <= 6; i++) {
+          const key = `Panelist ${i}`;
+          if (event[key]) {
+            panelists.push(event[key]);
+          }
+        }
+        const panelistP = document.createElement('p');
+        if (event.Type === "Panel" || event.Type === "Screening") {
+          panelistP.innerHTML = `<b>Panelists:</b> ${panelists.join(', ')}`;
+        } else {
+          panelistP.classList.add('no-show');
+        }
+        cardText.appendChild(panelistP);
+
+        card.appendChild(cardText);
+
+        // ===== Expiration Check =====
+        // Create a Date object from the event's day (date portion) and end time in CST.
+        // Assume event.Day is in the format "Thursday, 03/06/2025"
+        // and event["End Time"] is like "8:30 AM"
+        const datePart = event.Day.split(', ')[1]; // e.g., "03/06/2025"
+        const endTimeStr = event["End Time"];         // e.g., "8:30 AM"
+        const eventEnd = new Date(`${datePart} ${endTimeStr} CST`);
+        const now = new Date();
+        // If the current time is after the event's end time, mark the card as expired.
+        if (now > eventEnd) {
+          card.classList.add('no-show');
+        }
+        
+        container.appendChild(card);
+                // 2) Determine which container to put this card in
+                let containerId = '';
+        switch (event.Day) {
+          case 'Thursday, 03/06/2025':
+            containerId = 'card-container-1';
+            break;
+          case 'Friday, 03/07/2025':
+            containerId = 'card-container-2';
+            break;
+          case 'Saturday, 03/08/2025':
+            containerId = 'card-container-3';
+            break;
+          default:
+            // If it doesn't match any known day, do nothing or handle as needed
+            break;
+        }
+
+        // 3) Append the card to the correct container
+        if (containerId) {
+          const container = document.getElementById(containerId);
+          container.appendChild(card);
+        }
+      });
+    }
+
+    // Load the events from JSON and display them
+    loadEvents()
+      .then(events => {
+        displayCards(events);
+      })
+      .catch(err => {
+        console.error('Error loading JSON:', err);
+      });
+  </script>
+</body>
+</html>
