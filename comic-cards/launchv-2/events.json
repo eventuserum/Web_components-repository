@@ -59,11 +59,11 @@
     "Location": "RLP 1.302 B",
     "Type": "Panel",
     "Special": "FALSE",
-    "Moderator": "Jiba Molei Anderson",
+    "Moderator": "Rachel González-Martin",
     "Panelist 1": "Osmani R Alcaraz-Ocha",
     "Panelist 2": "Erika Said",
     "Panelist 3": "Juan G. Berumen",
-    "Panelist 4": "Luis Valdera",
+    "Panelist 4": "Luis Valderas",
     "Panelist 5": "Jaime Javier Rodriguez",
     "Panelist 6": "Scott Russell Duncan"
   },
@@ -90,7 +90,7 @@
     "Title": "Hilando Sones/ The Weaver's Songs",
     "Start Time": "10:00 AM",
     "End Time": "12:00 PM",
-    "Location": "RLP 1.302 F",
+    "Location": "RLP 4.102",
     "Type": "Screening",
     "Special": "FALSE",
     "Moderator": "Larry Rattner",
@@ -104,25 +104,8 @@
   {
     "#": 7,
     "Day": "Thursday, 03/06/2025",
-    "Title": "Monsters for End Times",
-    "Start Time": "11:00 AM",
-    "End Time": "11:45 AM",
-    "Location": "RLP 1.302 B",
-    "Type": "Panel",
-    "Special": "FALSE",
-    "Moderator": "Joanna Davis-McElligat",
-    "Panelist 1": "Dante Olivas",
-    "Panelist 2": "Travis Torres Thompson",
-    "Panelist 3": "Colton Campel",
-    "Panelist 4": "",
-    "Panelist 5": "",
-    "Panelist 6": ""
-  },
-  {
-    "#": 8,
-    "Day": "Thursday, 03/06/2025",
     "Title": "Benson Archive Tour",
-    "Start Time": "11:00 AM",
+    "Start Time": "10:00 AM",
     "End Time": "12:00 PM",
     "Location": "Benson Archival Tour",
     "Type": "Tour",
@@ -131,6 +114,23 @@
     "Panelist 1": "",
     "Panelist 2": "",
     "Panelist 3": "",
+    "Panelist 4": "",
+    "Panelist 5": "",
+    "Panelist 6": ""
+  },
+  {
+    "#": 8,
+    "Day": "Thursday, 03/06/2025",
+    "Title": "Monsters for End Times: Depictions of Monstrous Identities in Cultural Studies",
+    "Start Time": "11:00 AM",
+    "End Time": "11:45 AM",
+    "Location": "RLP 1.302 B",
+    "Type": "Panel",
+    "Special": "FALSE",
+    "Moderator": "Dani Orozco",
+    "Panelist 1": "Dante Olivas",
+    "Panelist 2": "Travis Torres Thompson",
+    "Panelist 3": "Colton Campbell",
     "Panelist 4": "",
     "Panelist 5": "",
     "Panelist 6": ""
@@ -172,7 +172,7 @@
   {
     "#": 11,
     "Day": "Thursday, 03/06/2025",
-    "Title": "The Art if BIPOC Comic Writing",
+    "Title": "The Art of BIPOC Comic Writing",
     "Start Time": "1:00 PM",
     "End Time": "1:45 PM",
     "Location": "RLP 1.302 B",
@@ -216,9 +216,9 @@
     "Panelist 1": "Dianita Vargas",
     "Panelist 2": "Ho-Seh Esquivel",
     "Panelist 3": "Sienna Wright",
-    "Panelist 4": "Chrs Peraza",
+    "Panelist 4": "Chris Peraza",
     "Panelist 5": "Peter Bonfitto",
-    "Panelist 6": "2spiritqueer"
+    "Panelist 6": "Sueitko Zamorano-Chavez"
   },
   {
     "#": 14,
@@ -246,7 +246,7 @@
     "Location": "RLP 1.302 B",
     "Type": "Panel",
     "Special": "FALSE",
-    "Moderator": "Dani Orozco",
+    "Moderator": "Jiba Molei Anderson",
     "Panelist 1": "J. Gonzo",
     "Panelist 2": "Henry Barajas",
     "Panelist 3": "John Jennings",
@@ -264,10 +264,10 @@
     "Type": "Panel",
     "Special": "FALSE",
     "Moderator": "José Morey",
-    "Panelist 1": "Professor Latinx",
-    "Panelist 2": "Felipe Esquivel",
-    "Panelist 3": "Miguel Hernández",
-    "Panelist 4": "José Luis Martínez",
+    "Panelist 1": "Felipe Esquivel",
+    "Panelist 2": "Miguel Hernández",
+    "Panelist 3": "José Luis Martínez",
+    "Panelist 4": "",
     "Panelist 5": "",
     "Panelist 6": ""
   },
@@ -348,7 +348,7 @@
     "Location": "RLP 1.302 B",
     "Type": "Panel",
     "Special": "FALSE",
-    "Moderator": "Christopher González",
+    "Moderator": "Corey Davis",
     "Panelist 1": "Angela Sanchez",
     "Panelist 2": "Marc Sanchez",
     "Panelist 3": "José Morey",
@@ -376,6 +376,23 @@
   {
     "#": 23,
     "Day": "Friday, 03/07/2025",
+    "Title": "C.R.E.A.T.O.R.S Workshop",
+    "Start Time": "11:00 AM",
+    "End Time": "11:45 AM",
+    "Location": "RLP 1.302 A",
+    "Type": "Workshop",
+    "Special": "FALSE",
+    "Moderator": "Darius Yancy",
+    "Panelist 1": "",
+    "Panelist 2": "",
+    "Panelist 3": "",
+    "Panelist 4": "",
+    "Panelist 5": "",
+    "Panelist 6": ""
+  },
+  {
+    "#": 24,
+    "Day": "Friday, 03/07/2025",
     "Title": "Lunch",
     "Start Time": "12:00 PM",
     "End Time": "1:00 PM",
@@ -391,7 +408,7 @@
     "Panelist 6": ""
   },
   {
-    "#": 24,
+    "#": 25,
     "Day": "Friday, 03/07/2025",
     "Title": "Screenings of Award-winning Animation Shorts",
     "Start Time": "12:00 PM",
@@ -408,7 +425,7 @@
     "Panelist 6": ""
   },
   {
-    "#": 25,
+    "#": 26,
     "Day": "Friday, 03/07/2025",
     "Title": "BIPOC PoP Emerging Artist Award",
     "Start Time": "12:00 PM",
@@ -425,7 +442,7 @@
     "Panelist 6": ""
   },
   {
-    "#": 26,
+    "#": 27,
     "Day": "Friday, 03/07/2025",
     "Title": "BIPOC Brick & Mortar: Shaping Culture, Sparking Change",
     "Start Time": "1:00 PM",
@@ -442,7 +459,7 @@
     "Panelist 6": ""
   },
   {
-    "#": 27,
+    "#": 28,
     "Day": "Friday, 03/07/2025",
     "Title": "My Primos Podcast Pop Quiz Round 2",
     "Start Time": "1:00 PM",
@@ -459,7 +476,7 @@
     "Panelist 6": ""
   },
   {
-    "#": 28,
+    "#": 29,
     "Day": "Friday, 03/07/2025",
     "Title": "Show Your Own Story",
     "Start Time": "1:00 PM",
@@ -467,7 +484,7 @@
     "Location": "RLP 1.302 A",
     "Type": "Workshop",
     "Special": "FALSE",
-    "Moderator": "Ernesto Cuevas",
+    "Moderator": "Ernesto Cuevas Jr",
     "Panelist 1": "Ernesto Cuevas",
     "Panelist 2": "",
     "Panelist 3": "",
@@ -476,7 +493,7 @@
     "Panelist 6": ""
   },
   {
-    "#": 29,
+    "#": 30,
     "Day": "Friday, 03/07/2025",
     "Title": "Texas A&M Talks: BIPOC PoP Unleashed!",
     "Start Time": "2:00 PM",
@@ -493,7 +510,7 @@
     "Panelist 6": ""
   },
   {
-    "#": 30,
+    "#": 31,
     "Day": "Friday, 03/07/2025",
     "Title": "Latin American Animation & Social Justice",
     "Start Time": "2:00 PM",
@@ -510,7 +527,7 @@
     "Panelist 6": ""
   },
   {
-    "#": 31,
+    "#": 32,
     "Day": "Friday, 03/07/2025",
     "Title": "Let’s Make Zines!",
     "Start Time": "2:00 PM",
@@ -527,7 +544,7 @@
     "Panelist 6": ""
   },
   {
-    "#": 32,
+    "#": 33,
     "Day": "Friday, 03/07/2025",
     "Title": "Black Comics Futurities",
     "Start Time": "3:00 PM",
@@ -544,7 +561,7 @@
     "Panelist 6": ""
   },
   {
-    "#": 33,
+    "#": 34,
     "Day": "Friday, 03/07/2025",
     "Title": "Latinx Multimodal Storytelling",
     "Start Time": "3:00 PM",
@@ -561,7 +578,7 @@
     "Panelist 6": ""
   },
   {
-    "#": 34,
+    "#": 35,
     "Day": "Friday, 03/07/2025",
     "Title": "Plática with Jaime Hernandez and Lalo Alcaraz",
     "Start Time": "4:00 PM",
@@ -578,13 +595,13 @@
     "Panelist 6": ""
   },
   {
-    "#": 35,
+    "#": 36,
     "Day": "Friday, 03/07/2025",
     "Title": "BIPOC PoP After Hours @ the Glickman",
     "Start Time": "6:00 PM",
     "End Time": "8:00 PM",
     "Location": "RLP 1.302 B",
-    "Type": "Break",
+    "Type": "AfterHours",
     "Special": "TRUE",
     "Moderator": "Musical Guest: Rico-ico",
     "Panelist 1": "",
@@ -595,7 +612,7 @@
     "Panelist 6": ""
   },
   {
-    "#": 36,
+    "#": 37,
     "Day": "Saturday, 03/08/2025",
     "Title": "Beyond the Stacks: How Diverse Librarians Can Amplify Diverse Voices in Comics",
     "Start Time": "9:00 AM",
@@ -612,7 +629,7 @@
     "Panelist 6": ""
   },
   {
-    "#": 37,
+    "#": 38,
     "Day": "Saturday, 03/08/2025",
     "Title": "Podcasting 101",
     "Start Time": "9:00 AM",
@@ -629,7 +646,7 @@
     "Panelist 6": ""
   },
   {
-    "#": 38,
+    "#": 39,
     "Day": "Saturday, 03/08/2025",
     "Title": "Hidden Figures and Lost Worlds of the BIPOC Imagination",
     "Start Time": "10:00 AM",
@@ -646,7 +663,7 @@
     "Panelist 6": ""
   },
   {
-    "#": 39,
+    "#": 40,
     "Day": "Saturday, 03/08/2025",
     "Title": "Intro to Storyboarding",
     "Start Time": "10:00 AM",
@@ -663,7 +680,7 @@
     "Panelist 6": ""
   },
   {
-    "#": 40,
+    "#": 41,
     "Day": "Saturday, 03/08/2025",
     "Title": "Project: MASA.5 The Solar Eclipse Portals",
     "Start Time": "11:00 AM",
@@ -680,7 +697,7 @@
     "Panelist 6": "Luis Valderas"
   },
   {
-    "#": 41,
+    "#": 42,
     "Day": "Saturday, 03/08/2025",
     "Title": "Unleash Your Creativity: Zine Making with Austin Bat Cave",
     "Start Time": "11:00 AM",
@@ -697,7 +714,7 @@
     "Panelist 6": ""
   },
   {
-    "#": 42,
+    "#": 43,
     "Day": "Saturday, 03/08/2025",
     "Title": "Lunch",
     "Start Time": "12:00 PM",
@@ -714,10 +731,10 @@
     "Panelist 6": ""
   },
   {
-    "#": 43,
+    "#": 44,
     "Day": "Saturday, 03/08/2025",
     "Title": "Platica with John Jennings and Peter Murietta",
-    "Start Time": "1:00 PM",
+    "Start Time": "12:30 PM",
     "End Time": "1:45 PM",
     "Location": "RLP 1.302 B",
     "Type": "Panel",
@@ -731,7 +748,7 @@
     "Panelist 6": ""
   },
   {
-    "#": 44,
+    "#": 45,
     "Day": "Saturday, 03/08/2025",
     "Title": "Comics & Zines: From Idea to Marketplace",
     "Start Time": "2:00 PM",
@@ -748,7 +765,7 @@
     "Panelist 6": "Raisa Alvarado"
   },
   {
-    "#": 45,
+    "#": 46,
     "Day": "Saturday, 03/08/2025",
     "Title": "The Graphic Novel as a Transformative Medium",
     "Start Time": "2:00 PM",
@@ -765,7 +782,7 @@
     "Panelist 6": ""
   },
   {
-    "#": 46,
+    "#": 47,
     "Day": "Saturday, 03/08/2025",
     "Title": "Putting the BIPOC PoP Into Entertainment Spaces",
     "Start Time": "3:00 PM",
@@ -782,7 +799,7 @@
     "Panelist 6": ""
   },
   {
-    "#": 47,
+    "#": 48,
     "Day": "Saturday, 03/08/2025",
     "Title": "Tarot & Verse: Crafting Original Poems with a Deck",
     "Start Time": "3:00 PM",
@@ -799,7 +816,7 @@
     "Panelist 6": ""
   },
   {
-    "#": 48,
+    "#": 49,
     "Day": "Saturday, 03/08/2025",
     "Title": "Being BIPOC in Games: Representation and Identity in Play",
     "Start Time": "4:00 PM",
@@ -816,7 +833,7 @@
     "Panelist 6": ""
   },
   {
-    "#": 49,
+    "#": 50,
     "Day": "Saturday, 03/08/2025",
     "Title": "Zine Empowerment 101",
     "Start Time": "4:00 PM",
@@ -833,15 +850,15 @@
     "Panelist 6": ""
   },
   {
-    "#": 50,
+    "#": 51,
     "Day": "Saturday, 03/08/2025",
     "Title": "What’s Next for BIPOC PoP & Other BIPOC Actions & Events...",
     "Start Time": "5:00 PM",
     "End Time": "5:30 PM",
     "Location": "RLP 1.302 B",
-    "Type": "Panel",
+    "Type": "AfterHours",
     "Special": "TRUE",
-    "Moderator": "Profe Latinx",
+    "Moderator": "",
     "Panelist 1": "",
     "Panelist 2": "",
     "Panelist 3": "",
@@ -850,16 +867,16 @@
     "Panelist 6": ""
   },
   {
-    "#": 51,
+    "#": 52,
     "Day": "Saturday, 03/08/2025",
     "Title": "LatinX in Animation Mixer with Powerhouse Animation Studios",
-    "Start Time": "",
-    "End Time": "",
-    "Location": "Location TBD",
-    "Type": "Break",
+    "Start Time": "6:30 PM",
+    "End Time": "9:00 PM",
+    "Location": "Scholz Garten",
+    "Type": "AfterHours",
     "Special": "TRUE",
-    "Moderator": "",
-    "Panelist 1": "",
+    "Moderator": "1607 San Jacinto Blvd",
+    "Panelist 1": "Austin, TX 78701",
     "Panelist 2": "",
     "Panelist 3": "",
     "Panelist 4": "",

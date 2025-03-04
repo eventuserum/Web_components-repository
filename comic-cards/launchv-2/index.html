@@ -118,6 +118,9 @@
           moderatorP.innerHTML = `<b>Facilitator:</b> ${event.Moderator}`;
         } else if ( event.Type === "Panel" ) {
           moderatorP.innerHTML = `<b>Moderator:</b> ${event.Moderator}`;
+        } else if (event.Type === "AfterHours") {
+          console.log("After Hours");
+          moderatorP.innerHTML = `${event.Moderator}`;
         }
         cardText.appendChild(moderatorP);
 
@@ -131,8 +134,12 @@
           }
         }
         const panelistP = document.createElement('p');
-        if (event.Type === "Panel" || event.Type === "Screening") {
+        if (event.Type === "Panel" ) {
           panelistP.innerHTML = `<b>Panelists:</b> ${panelists.join(', ')}`;
+        } else if (event.Type === "AfterHours") {
+          panelistP.innerHTML = `${panelists.join(', ')}`;
+        } else if(event.Type === "Screening") {
+          panelistP.innerHTML = `<b>Panelists:</b> ${panelists.join(', ')}</br> </br><b>Location:</b> Latinx Pop Lab`;
         } else {
           panelistP.classList.add('no-show');
         }

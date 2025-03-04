@@ -88,6 +88,9 @@ Card Types:
 .break {
     background-color: pink;
 }
+.afterhours {
+    background-color: #ff7a09;
+}
 
 .screening {
     background-color: #a49cc0;
