@@ -4,30 +4,166 @@
   <meta charset="UTF-8" />
   <title>Event Cards</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Existing viewport/cookie script -->
   <script>
-    <script>
-(function(d){
-    function C(k){return(d.cookie.match('(^|; )'+k+'=([^;]*)')||0):inlineRefs{references="&#91;&#123;&quot;type&quot;&#58;&quot;inline_reference&quot;,&quot;start_index&quot;&#58;509,&quot;end_index&quot;&#58;512,&quot;number&quot;&#58;2,&quot;url&quot;&#58;&quot;https&#58;//stackoverflow.com/questions/45622686/how-do-i-make-my-responsive-website-honour-request-a-desktop-site-on-mobiles&quot;,&quot;favicon&quot;&#58;&quot;https&#58;//imgs.search.brave.com/4WRMec_wn8Q9LO6DI43kkBvIL6wD5TYCXztC9C9kEI0/rs&#58;fit&#58;32&#58;32&#58;1&#58;0/g&#58;ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWU3Zjg0ZjA1/YjQ3ZTlkNjQ1ODA1/MjAwODhiNjhjYWU0/OTc4MjM4ZDJlMTBi/ODExYmNiNTkzMjdh/YjM3MGExMS9zdGFj/a292ZXJmbG93LmNv/bS8&quot;,&quot;snippet&quot;&#58;&quot;This&#32;works&#32;for&#32;me&#32;in&#32;mobile&#32;Safari&#32;on&#32;both&#32;iPhone&#32;5&#32;and&#32;6&#32;running&#32;iOS&#32;10.3.3&#32;and&#32;(two&#32;years&#32;later)&#32;an&#32;iPhone&#32;XS&#32;running&#32;iOS&#32;13.3.\nAddendum&#32;31.12.2019\nIn&#32;response&#32;to&#32;a&#32;request&#32;for&#32;further&#32;details,&#32;all&#32;I&#32;did&#32;was&#32;add&#32;the&#32;following&#32;at&#32;the&#32;bottom&#32;of&#32;each&#32;web&#32;page,&#32;just&#32;before&#32;the&#32;&#32;tag&#58;\n\n&#32;\n(function(d)&#123;&#32;\nfunction&#32;C(k)&#123;return(d.cookie.match('(^|;&#32;)'+k+'=(&#91;^;&#93;*)')||0)&#91;2&#93;;&#125;&#32;\nvar&#32;ua&#32;=&#32;navigator.userAgent,&#32;\n…&quot;&#125;&#93;"};}
-    var ua = navigator.userAgent,
-        ismobile = / mobile/i.test(ua),
-        mgecko = !!( / gecko/i.test(ua) && / firefox\\//i.test(ua)),
-        wasmobile = C('wasmobile') === "was",
-        desktopvp = 'user-scalable=yes, maximum-scale=2',
-        el;
-    if(ismobile && !wasmobile){
-        d.cookie = "wasmobile=was";
-    } else if (!ismobile && wasmobile){
-        if (mgecko) {
-            el = d.createElement('meta');
-            el.setAttribute('content',desktopvp);
-            el.setAttribute('name','viewport');
-            d.getElementsByTagName('head').:inlineRefs{references="&#91;&#123;&quot;type&quot;&#58;&quot;inline_reference&quot;,&quot;start_index&quot;&#58;1086,&quot;end_index&quot;&#58;1089,&quot;number&quot;&#58;0,&quot;url&quot;&#58;&quot;https&#58;//forum.wixstudio.com/t/how-to-block-request-desktop-site-from-url-reload-on-mobile-device/37568&quot;,&quot;favicon&quot;&#58;&quot;https&#58;//imgs.search.brave.com/k1Q4PEELVRO2IdONYb_RKT_bqgE-hwtXCUoBvWcnMLA/rs&#58;fit&#58;32&#58;32&#58;1&#58;0/g&#58;ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzIzMzQ2ZDRj/ZjMwNjk5ZjIxZGU2/MWE0NjY2YzAzYzc3/YWE3ODEyYjBiMTYw/NWQ0MDJhZGZiZTZm/NzZlMzRlNy9mb3J1/bS53aXhzdHVkaW8u/Y29tLw&quot;,&quot;snippet&quot;&#58;&quot;Need&#32;help&#32;turning&#32;off&#32;mobile&#32;friendly&#32;to&#32;certain&#32;pages&#32;of&#32;my&#32;site.&#32;Ask&#32;the&#32;community&#32;code&#32;,&#32;question&#58;&#32;How&#32;can&#32;I&#32;find&#32;my&#32;mobile&#32;friendly&#32;URL&#32;to&#32;reroute&#32;tablets&#32;using&#32;wixlocation.to?&#32;Ask&#32;the&#32;community&#32;code&#32;,&#32;question&#32;•&#32;January&#32;23,&#32;2020&#58;&#32;August&#32;1,&#32;2020…&quot;&#125;&#93;"}appendChild( el );
-        } else {
-            d.getElementsByName('viewport').:inlineRefs{references="&#91;&#123;&quot;type&quot;&#58;&quot;inline_reference&quot;,&quot;start_index&quot;&#58;1169,&quot;end_index&quot;&#58;1172,&quot;number&quot;&#58;0,&quot;url&quot;&#58;&quot;https&#58;//forum.wixstudio.com/t/how-to-block-request-desktop-site-from-url-reload-on-mobile-device/37568&quot;,&quot;favicon&quot;&#58;&quot;https&#58;//imgs.search.brave.com/k1Q4PEELVRO2IdONYb_RKT_bqgE-hwtXCUoBvWcnMLA/rs&#58;fit&#58;32&#58;32&#58;1&#58;0/g&#58;ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzIzMzQ2ZDRj/ZjMwNjk5ZjIxZGU2/MWE0NjY2YzAzYzc3/YWE3ODEyYjBiMTYw/NWQ0MDJhZGZiZTZm/NzZlMzRlNy9mb3J1/bS53aXhzdHVkaW8u/Y29tLw&quot;,&quot;snippet&quot;&#58;&quot;Need&#32;help&#32;turning&#32;off&#32;mobile&#32;friendly&#32;to&#32;certain&#32;pages&#32;of&#32;my&#32;site.&#32;Ask&#32;the&#32;community&#32;code&#32;,&#32;question&#58;&#32;How&#32;can&#32;I&#32;find&#32;my&#32;mobile&#32;friendly&#32;URL&#32;to&#32;reroute&#32;tablets&#32;using&#32;wixlocation.to?&#32;Ask&#32;the&#32;community&#32;code&#32;,&#32;question&#32;•&#32;January&#32;23,&#32;2020&#58;&#32;August&#32;1,&#32;2020…&quot;&#125;&#93;"}setAttribute('content',desktopvp);
+    (function(d){
+      function C(k){ return (d.cookie.match('(^|; )'+k+'=([^;]*)')||0)[2]; }
+      var ua = navigator.userAgent,
+          ismobile = / mobile/i.test(ua),
+          mgecko = !!(/ gecko/i.test(ua) && / firefox\//i.test(ua)),
+          wasmobile = C('wasmobile') === "was",
+          desktopvp = 'user-scalable=yes, maximum-scale=2',
+          el;
+      if(ismobile && !wasmobile){
+          d.cookie = "wasmobile=was";
+      } else if (!ismobile && wasmobile){
+          if (mgecko) {
+              el = d.createElement('meta');
+              el.setAttribute('content',desktopvp);
+              el.setAttribute('name','viewport');
+              d.getElementsByTagName('head')[0].appendChild(el);
+          } else {
+              d.getElementsByName('viewport')[0].setAttribute('content',desktopvp);
+          }
+      }
+    }(document));
+  </script>
+  
+  <!-- Our hyperlink function and dictionary -->
+  <script>
+    // Define dictionary of names and corresponding URLs.
+    const nameDictionary = {
+    "Frederick Luis Aldama": "",
+    "Dani Orozco": "",
+    "Rachel González-Martin": "https://liberalarts.utexas.edu/mals/faculty/rvg225",
+    "Ngozi Ukazu": "https://www.ngoziu.com/",
+    "Larry Rattner": "https://www.imdb.com/name/nm0711910/",
+    "Benson Latin American Collection": "https://www.lib.utexas.edu/about/locations/benson",
+    "Enrique García": "https://www.middlebury.edu/college/people/enrique-garcia-0",
+    "Patrick Lugo": "https://www.instagram.com/plugoarts/",
+    "Lee Franscis IV": "https://www.instagram.com/dr.indiginerd/",
+    "Mike \"Chicano Batman\" Garcia": "https://www.instagram.com/mgarcia5159/",
+    "Jiba Molei Anderson": "http://www.griotenterprises.com/",
+    "José Morey": "https://www.linkedin.com/in/drjosemorey",
+    "Lydia CdeBaca-Cruz": "",
+    "Paty Abril-Gonzalez": "https://education.utexas.edu/faculty/patricia_holt/",
+    "Fredie \"Primo\" Mejia": "https://myprimospodcast.com/about",
+    "Corey Davis": "https://www.rocbottomstudios.com/",
+    "Darius Yancy": "https://www.instagram.com/yancyhousepublishing/",
+    "Stanford Carpenter": "https://www.linkedin.com/in/stanford-w-carpenter-phd-46658a5",
+    "Ernesto Cuevas Jr": "https://www.ernestocuevasjr.com/",
+    "Kevin Garcia": "https://www.linkedin.com/in/kevin-garcia-dot-com",
+    "Angela Sanchez": "https://angelamsanchez.com/",
+    "Tito & Chente": "",
+    "Domino Perez": "",
+    "Joey Lopez": "https://artsci.tamu.edu/comm-journalism/contact/profiles/joseph-lopez.html",
+    "Musical Guest: Rico-ico": "https://www.instagram.com/rico_ico_musica/",
+    "Gabriel Lopez": "https://www.linkedin.com/in/gabriel-lopez-112220152",
+    "Ayden Castellanos": "https://www.instagram.com/sustopodcast/",
+    "Kiana T. Murphy": "https://vivo.brown.edu/display/kmurph37",
+    "Ray Mendoza Landa": "https://www.instagram.com/raydiosilence/?hl=en",
+    "D'Arcee Charington Neal": "https://www.linkedin.com/in/d-arcee-neal-phd-08447a21",
+    "Leticia Urieta": "https://leticiaaurieta.com/",
+    "Frederick Luis Aldama__1": "",
+    "Héctor Rodriguez III": "https://www.linkedin.com/in/hector-rodriguez-iii-50bb3115b",
+    "Bahar Momeni": "https://www.baharmomeni.com/",
+    "Caroline De La Garza": "https://www.instagram.com/13.c.e/?igsh=cXlvNHo4Z2g1a3V6",
+    "Felipe Esquivel": "",
+    "Cristina Casas": "https://library.austintexas.libguides.com/prf.php?id=61c53fa2-7cdb-11ed-9922-0ad758b798c3",
+    "Profe Latinx": "",
+    "1607 San Jacinto Blvd": "",
+    "Leticia Urieta__1": "https://leticiaaurieta.com/",
+    "Osmani R Alcaraz-Ocha": "https://events.getcreativesanantonio.com/artist/osmani-r-alcaraz-ochoa/",
+    "Ismael Vásquez Bernabé": "",
+    "Dante Olivas": "https://chicanos.unm.edu/people/grads/dante-olivas.html",
+    "Dianita Vargas": "https://www.artbydianita.com/",
+    "J. Gonzo": "https://imagecomics.com/creators/j-gonzo",
+    "Paloma Aguirre": "https://www.instagram.com/palomanoseinabook/",
+    "Mr. Jose Perales": "https://sanchez.austinschools.org/programs/grade-levels/first-grade",
+    "Lee Francis IV": "https://www.instagram.com/dr.indiginerd/",
+    "Regina Mills": "https://artsci.tamu.edu/english/contact/profiles/regina-mills.html",
+    "Pablo Leon": "https://artsypabster.com/",
+    "Tito": "https://toontito.neocities.org/?fbclid=PAZXh0bgNhZW0CMTEAAaaJlwy1yAd48C_U4xGeFK8O0R8rbE1rddro9o9U0Uq4VUhkFURYgQJ9V4M_aem_Pjb0VP8QfyTHnjeajmjf4Q",
+    "Joanna Davis-McElligatt": "https://english.unt.edu/people/joanna-davis-mcelligatt-phd.html",
+    "Jaime Hernandez": "https://en.wikipedia.org/wiki/Jaime_Hernandez",
+    "Elizabeth M. Bradshaw": "https://wileyc.libguides.com/prf.php?id=62ca6d79-7cdb-11ed-9922-0ad758b798c3",
+    "Kim Bishop": "https://www.kimbishopart.com/",
+    "John Jennings": "https://www.johnjenningsstudio.com/",
+    "Miki Ramirez": "https://osoincstudios.wixsite.com/my-site",
+    "Emmanuel Valtierra": "https://emmanuelvaltierra.com/",
+    "Austin, TX 78701": "",
+    "Gabriel Rodríguez Lemus, Jr.": "",
+    "Erika Said": "https://www.linkedin.com/in/erika-said-530343264",
+    "Travis Torres Thompson": "https://chicanos.unm.edu/people/grads/travis-torres-thompson.html",
+    "Robert Carmichael": "https://www.instagram.com/thirsty_jack803/profilecard/?igsh=d245aWdqMDJrMWQ5",
+    "Ho-Seh Esquivel": "http://www.alto-shorter.com/",
+    "Henry Barajas": "https://imagecomics.com/creators/henry-barajas",
+    "Miguel Hernández": "https://www.instagram.com/miguelangelhdzart/",
+    "Rene Arteaga": "https://liberalarts.utexas.edu/ams/gradstudents/rxa73",
+    "Cecilia Holt": "",
+    "Eliamaría Madrid": "https://spicedeliastrations.carrd.co/",
+    "Marc Sanchez": "https://www.instagram.com/bigpavvo/?hl=en",
+    "Dr. Intergalactic": "",
+    "Lilia Rosas": "https://www.resistenciabooks.com/",
+    "Chente": "https://vinnyvistazo.com/",
+    "Christian Hines": "https://faculty.txst.edu/profile/2457804",
+    "Lalo Alcaraz": "https://laloalcaraz.com/",
+    "Majestie Varnado": "https://www.linkedin.com/in/majestie-varnado-68505b1b6",
+    "Margarita Castromán": "https://profiles.rice.edu/faculty/margarita-castroman-soto",
+    "Kat Deck-Portillo": "https://colfa.utsa.edu/faculty/profiles/deck-portillo-katherine.html",
+    "Peter Murrieta": "https://www.linkedin.com/in/peter-murrieta-273a508",
+    "Plus Waco Comics": "http://pluswacocomics.com/",
+    "Armando Estrada": "https://www.instagram.com/todochid0/?hl=en",
+    "Anthony Jackson": "https://artsci.tamu.edu/sociology/people/profiles/anthony-s-jackson.html",
+    "Luis Valderas": "https://www.luisvalderasartist.com/",
+    "Colton Campbell": "https://chicanos.unm.edu/people/grads/colton-campbell.html",
+    "José Alaniz": "https://www.flowersongpress.com/authors-ah/jos-alaniz",
+    "Sienna Wright": "https://www.instagram.com/artbysien/",
+    "José Luis Martínez": "https://www.instagram.com/huitzilotoons/",
+    "Samantha Ceballos": "https://liberalarts.utexas.edu/english/gradstudents/sjc3572",
+    "Emi Holt": "",
+    "Edward Vidaurre": "https://edwardvidaurre.com/",
+    "Sohee Kim": "https://liberalarts.tamu.edu/resi/profile/sohee-kim/",
+    "Getse Pérez": "https://mx.linkedin.com/in/getsemani-perez",
+    "Dan Johnson": "https://www.linkedin.com/in/danjohnson8",
+    "Juan C. Escobedo": "https://www.instagram.com/x_j.esc/",
+    "Gabriel Hernandez": "https://coywolfcomic.com/",
+    "Adrian Villegas": "https://www.instagram.com/adrian.d.villegas/?hl=enhttps://www.instagram.com/adrian.d.villegas/?hl=en",
+    "Jaime Javier Rodriguez": "https://lmas.unt.edu/people/dr-jaime-javier-rodriguez.html",
+    "Chris Peraza": "https://www.instagram.com/crispyart3d/",
+    "Jay Kalagayan": "https://www.linkedin.com/in/kalagayan",
+    "Rose Padilla": "https://liberalarts.utexas.edu/english/gradstudents/rp38323",
+    "Bill Nericcio": "https://literature.sdsu.edu/people/nericcio",
+    "Joseline González-Ajanel": "https://artsci.tamu.edu/english/contact/profiles/joseline-gonzalez-ajanel.html",
+    "Christina E. Taylor": "https://www.christinaetaylor.net/home",
+    "Guilermina Zabala": "https://colfa.utsa.edu/faculty/profiles/zabalasuarez-guillermina.html",
+    "Wilfred Esteves": "https://m.tapas.io/series/Thorn-Squadron/info",
+    "Chispa Comics": "https://www.instagram.com/chispacomics/",
+    "Peter Bonfitto": "https://admc.austincc.edu/art/peter-bonfitto/",
+    "Andrea Escalante": "",
+    "Sasha Sanders": "https://coms.calpoly.edu/dr-sasha-sanders",
+    "Rafael Flores Jr.": "https://www.instagram.com/camazotzcomics/",
+    "Brandy González": "https://www.instagram.com/gonzalezoriginal/?hl=en",
+    "MexAmericon": "https://www.mexamericon.com/",
+    "Scott Russell Duncan": "https://www.scottrussellduncan.com/#/",
+    "Sueitko Zamorano-Chavez": "http://www.2spiritqueer.shop",
+    "Malcolm Harris": "https://www.imdb.com/name/nm8348236/",
+    "Raisa Alvarado": "https://www.csusb.edu/profile/raisa.alvarado"
+  };
+
+    // This function loops through the dictionary and replaces any whole-word
+    // occurrences of a name in the input text with an anchor element.
+    function hyperlinkText(text) {
+      for (const name in nameDictionary) {
+        let url = nameDictionary[name];
+        // Only replace if the URL is a non-empty, non-whitespace string.
+        if (url && url.trim().length > 0) {
+          const regex = new RegExp(`\\b${name}\\b`, "g");
+          text = text.replace(regex, `<a href="${url}">${name}</a>`);
         }
+      }
+      return text;
     }
-}(document));
-</script>
   </script>
 </head>
 <body>
@@ -37,16 +173,16 @@
     <!-- Day containers -->
     <div id="card-container-1" class="day-container">
         <h2>Thursday, 03/06/2025</h2>
-      </div>
-    
-      <div id="card-container-2" class="day-container">
-        <h2>Friday, 03/07/2025</h2>
-      </div>
-    
-      <div id="card-container-3" class="day-container">
-        <h2>Saturday, 03/08/2025</h2>
-      </div>
     </div>
+    
+    <div id="card-container-2" class="day-container">
+        <h2>Friday, 03/07/2025</h2>
+    </div>
+    
+    <div id="card-container-3" class="day-container">
+        <h2>Saturday, 03/08/2025</h2>
+    </div>
+  </div>
 
   <script>
     /**
@@ -54,7 +190,6 @@
      */
     async function loadEvents() {
       const response = await fetch('events.json');
-      // Convert response to JavaScript array (or object)
       const events = await response.json();
       return events;
     }
@@ -63,8 +198,6 @@
      * Build and display cards for each event object.
      */
     function displayCards(events) {
-      const container = document.getElementById('container');
-
       events.forEach(event => {
         // Create the main card container
         const card = document.createElement('div');
@@ -72,8 +205,6 @@
 
         // ===== Card Image Section =====
         const cardImage = document.createElement('div');
-        // Convert event.Type to a lowercase class for styling
-        // e.g. "Break" -> "break", "Panel" -> "panel", etc.
         const typeClass = event.Type.toLowerCase();
         cardImage.classList.add('card-image', typeClass);
 
@@ -98,7 +229,6 @@
         // ===== Card Text Section =====
         const cardText = document.createElement('div');
         cardText.classList.add('card-text');
-        // If 'Special' == 'TRUE', add a special class
         if (event.Special.toUpperCase() === 'TRUE') {
           cardText.classList.add('card-text-special');
         }
@@ -110,22 +240,20 @@
 
         // Moderator
         const moderatorP = document.createElement('p');
-        // If the Type is Break or Awards, hide the Moderator
         if (event.Type === 'Break' || event.Type === 'Awards') {
           moderatorP.classList.add('no-show');
         }
+        // For events with a moderator/facilitator, run the text through hyperlinkText
         if (event.Type === "Workshop" || event.Type === "Screening") {
-          moderatorP.innerHTML = `<b>Facilitator:</b> ${event.Moderator}`;
+          moderatorP.innerHTML = `<b>Facilitator:</b> ${hyperlinkText(event.Moderator)}`;
         } else if ( event.Type === "Panel" ) {
-          moderatorP.innerHTML = `<b>Moderator:</b> ${event.Moderator}`;
+          moderatorP.innerHTML = `<b>Moderator:</b> ${hyperlinkText(event.Moderator)}`;
         } else if (event.Type === "AfterHours") {
-          console.log("After Hours");
-          moderatorP.innerHTML = `${event.Moderator}`;
+          moderatorP.innerHTML = hyperlinkText(event.Moderator);
         }
         cardText.appendChild(moderatorP);
 
-        // Panelists
-        // We'll gather panelists 1..6 into an array if they exist
+        // Panelists (if any)
         const panelists = [];
         for (let i = 1; i <= 6; i++) {
           const key = `Panelist ${i}`;
@@ -134,12 +262,12 @@
           }
         }
         const panelistP = document.createElement('p');
-        if (event.Type === "Panel" ) {
-          panelistP.innerHTML = `<b>Panelists:</b> ${panelists.join(', ')}`;
+        if (event.Type === "Panel") {
+          panelistP.innerHTML = `<b>Panelists:</b> ${hyperlinkText(panelists.join(', '))}`;
         } else if (event.Type === "AfterHours") {
-          panelistP.innerHTML = `${panelists.join(', ')}`;
+          panelistP.innerHTML = hyperlinkText(panelists.join(', '));
         } else if(event.Type === "Screening") {
-          panelistP.innerHTML = `<b>Panelists:</b> ${panelists.join(', ')}</br> </br><b>Location:</b> Latinx Pop Lab`;
+          panelistP.innerHTML = `<b>Panelists:</b> ${hyperlinkText(panelists.join(', '))}</br> </br><b>Location:</b> Latinx Pop Lab`;
         } else {
           panelistP.classList.add('no-show');
         }
@@ -148,21 +276,16 @@
         card.appendChild(cardText);
 
         // ===== Expiration Check =====
-        // Create a Date object from the event's day (date portion) and end time in CST.
-        // Assume event.Day is in the format "Thursday, 03/06/2025"
-        // and event["End Time"] is like "8:30 AM"
-        const datePart = event.Day.split(', ')[1]; // e.g., "03/06/2025"
-        const endTimeStr = event["End Time"];         // e.g., "8:30 AM"
+        const datePart = event.Day.split(', ')[1];
+        const endTimeStr = event["End Time"];
         const eventEnd = new Date(`${datePart} ${endTimeStr} CST`);
         const now = new Date();
-        // If the current time is after the event's end time, mark the card as expired.
         if (now > eventEnd) {
           card.classList.add('no-show');
         }
         
-        container.appendChild(card);
-                // 2) Determine which container to put this card in
-                let containerId = '';
+        // Determine the correct container based on the event day.
+        let containerId = '';
         switch (event.Day) {
           case 'Thursday, 03/06/2025':
             containerId = 'card-container-1';
@@ -174,19 +297,15 @@
             containerId = 'card-container-3';
             break;
           default:
-            // If it doesn't match any known day, do nothing or handle as needed
             break;
         }
-
-        // 3) Append the card to the correct container
         if (containerId) {
-          const container = document.getElementById(containerId);
-          container.appendChild(card);
+          document.getElementById(containerId).appendChild(card);
         }
       });
     }
 
-    // Load the events from JSON and display them
+    // Load the events from JSON and display them.
     loadEvents()
       .then(events => {
         displayCards(events);
@@ -195,5 +314,6 @@
         console.error('Error loading JSON:', err);
       });
   </script>
+  
 </body>
 </html>
